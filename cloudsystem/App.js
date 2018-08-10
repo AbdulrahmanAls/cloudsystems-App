@@ -39,7 +39,7 @@ export default class App extends React.Component {
             <Text>{"Personal\n"}</Text>
           </Button>
 </Container>*/
-<MainTabNavigator/>
+<Login/>
     )}
   }
   const styles = StyleSheet.create({
