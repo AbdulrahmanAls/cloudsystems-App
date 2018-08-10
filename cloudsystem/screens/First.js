@@ -17,7 +17,6 @@ export default class First extends React.Component {
     render() {
       return (
         <Container>
-        <Header />
         <Content>
           <Card>
             <CardItem cardBody>

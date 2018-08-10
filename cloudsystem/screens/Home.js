@@ -25,6 +25,7 @@ export default class Home extends React.Component {
   <Content>
     <Body>
    <Text> I am Home </Text>
+   <Icon name='home' />
   </Body>
   </Content>
 </Container>

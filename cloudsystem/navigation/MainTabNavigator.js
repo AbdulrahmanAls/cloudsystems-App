@@ -1,6 +1,7 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import { Container, Header, Content, Badge, Text, Icon, Body } from 'native-base';
 
 import TabBarIcon from '../components/TabBarIcon';
 import Login from '../screens/Login';
@@ -17,14 +18,7 @@ const StartStack = createStackNavigator({
 StartStack.navigationOptions = {
   tabBarLabel: 'Start',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
-    />
+<Icon name='log-in' />
   ),
 };
 
@@ -35,10 +29,8 @@ const HomeStack = createStackNavigator({
 HomeStack.navigationOptions = {
   tabBarLabel: 'Home',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link'}
-    />
+    <Icon name='home' />
+
   ),
 };
 
