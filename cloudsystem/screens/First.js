@@ -13,7 +13,7 @@ import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
 
-export default class First extends React.Component { 
+export default class First extends React.Component {
     render() {
       return (
         <Container>
@@ -25,7 +25,7 @@ export default class First extends React.Component {
             <CardItem>
               <Body>
               <View style={{alignItems: 'center'}}>
-              <H1 style={styles.bigblue}>{'\n Welcome to cloud systems App\n\n\n\n'}</H1>
+              <Text style={styles.bigblue}>{'\n Welcome to cloud systems App\n'}</Text>
               </View>
               </Body>
             </CardItem>
@@ -38,14 +38,13 @@ export default class First extends React.Component {
       );
     }
   }
-  
+
   const styles = StyleSheet.create({
     bigblue: {
       color: 'aqua',
       textAlign: 'center',
-      fontSize: 45,
+      fontSize: 40,
       alignItems: "center",
       justifyContent:"center",
     }
   });
-  

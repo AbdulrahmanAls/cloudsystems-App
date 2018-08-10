@@ -22,12 +22,9 @@ export default class Tasks extends React.Component {
     return (
       <Container>
         <Header hasTabs />
-        <CardItem cardBody>
-              <Image source={{uri: 'https://www.logolynx.com/images/logolynx/62/62ca7aaf03633173c02c1cfd69d3e02d.jpeg'}} style={{height: 100, width: null, flex: 1}}/>
-            </CardItem>
             <View style={{alignItems: 'center'}}>
             <Text> {'\n'} </Text>
-            <H1 style={styles.Text}> Tasks </H1>
+            <Text style={styles.Text}> Tasks </Text>
             <Text> {'\n'} </Text>
             </View>
         <Tabs>
@@ -38,7 +35,7 @@ export default class Tasks extends React.Component {
             </Card>
             </Content>
         </Tab>
-       
+
 
       <Tab heading="Group Tasks">
         <Content>
@@ -47,14 +44,14 @@ export default class Tasks extends React.Component {
             </Card>
         </Content>
         </Tab>
-        
+
 
         </Tabs>
 
       </Container>
     );
   }
-  
+
 }
 const styles = StyleSheet.create({
   Text: {
