@@ -11,7 +11,7 @@ import Courses from './screens/Courses';
 import Persional from './screens/Persional';
 import Tasks from './screens/Tasks';
 import MainTabNavigator from './navigation/MainTabNavigator';
-
+import 'expo';
 
 // this is the main file which will show any other page
 export default class App extends React.Component {
@@ -51,4 +51,3 @@ export default class App extends React.Component {
       justifyContent:"center",
     }
   });
-  
