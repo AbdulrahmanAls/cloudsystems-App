@@ -6,13 +6,16 @@ import TabBarIcon from '../components/TabBarIcon';
 import Login from '../screens/Login';
 import Home from '../screens/Home';
 import First from '../screens/First';
+import Persional from '../screens/Persional';
+import Courses from '../screens/Courses';
+import Tasks from '../screens/Tasks';
 
-const HomeStack = createStackNavigator({
-  Home: Login,
+const StartStack = createStackNavigator({
+  Start: First,
 });
 
-HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
+StartStack.navigationOptions = {
+  tabBarLabel: 'Start',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -25,12 +28,12 @@ HomeStack.navigationOptions = {
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: Home,
+const HomeStack = createStackNavigator({
+  Home: Home,
 });
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+HomeStack.navigationOptions = {
+  tabBarLabel: 'Home',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -39,12 +42,40 @@ LinksStack.navigationOptions = {
   ),
 };
 
-const SettingsStack = createStackNavigator({
-  Settings: First,
+const PersionalStack = createStackNavigator({
+  Persional: Persional,
 });
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+PersionalStack.navigationOptions = {
+  tabBarLabel: 'Personal',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options'}
+    />
+  ),
+};
+
+const CoursesStack = createStackNavigator({
+  Courses: Courses,
+});
+
+CoursesStack.navigationOptions = {
+  tabBarLabel: 'Courses',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options'}
+    />
+  ),
+};
+
+const TasksStack = createStackNavigator({
+  Tasks: Tasks,
+});
+
+TasksStack.navigationOptions = {
+  tabBarLabel: 'Tasks',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -54,7 +85,10 @@ SettingsStack.navigationOptions = {
 };
 
 export default createBottomTabNavigator({
+  StartStack,
   HomeStack,
-  LinksStack,
-  SettingsStack,
+  CoursesStack,
+  TasksStack,
+  PersionalStack,
+
 });
