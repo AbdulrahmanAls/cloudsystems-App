@@ -24,7 +24,9 @@ export default class First extends React.Component {
             </CardItem>
             <CardItem>
               <Body>
-              <H1 style={styles.bigblue}>{'\n Welcome to cloud systems\n\n\n\n'}</H1>
+              <View style={{alignItems: 'center'}}>
+              <H1 style={styles.bigblue}>{'\n Welcome to cloud systems App\n\n\n\n'}</H1>
+              </View>
               </Body>
             </CardItem>
             <Button block info>

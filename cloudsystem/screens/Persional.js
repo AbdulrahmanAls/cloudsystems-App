@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Header, Content, Badge, Text, Icon, Body } from 'native-base';
+import { Container, Header, Content, Badge, Text, Icon, Body, Card, CardItem, Left, Thumbnail,
+  } from 'native-base';
 import {
   Image,
   Platform,
@@ -21,13 +22,22 @@ export default class Persional extends React.Component {
   render() {
     return (
       <Container>
-  <Header />
-  <Content>
-    <Body>
-   <Text> I am Persional </Text>
-  </Body>
-  </Content>
-</Container>
+      <Content>
+        <Header/>
+      <Card style={{flex: 0}}>
+                <CardItem>
+                  <Left>
+                    <Thumbnail source={{uri: 'https://cdn0.iconfinder.com/data/icons/PRACTIKA/256/user.png'}} />
+                    </Left>
+                  </CardItem>
+    
+       </Card>
+    
+    <Card>
+    
+      </Card>
+      </Content>
+    </Container>
     );
   }
 }
