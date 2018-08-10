@@ -29,7 +29,7 @@ const HomeStack = createStackNavigator({
 HomeStack.navigationOptions = {
   tabBarLabel: 'Home',
   tabBarIcon: ({ focused }) => (
-    <Icon name='home' />
+    <Icon type="Entypo" name='home' />
 
   ),
 };
@@ -41,10 +41,7 @@ const PersionalStack = createStackNavigator({
 PersionalStack.navigationOptions = {
   tabBarLabel: 'Personal',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options'}
-    />
+    <Icon type="Entypo" name='user' />
   ),
 };
 
@@ -55,10 +52,8 @@ const CoursesStack = createStackNavigator({
 CoursesStack.navigationOptions = {
   tabBarLabel: 'Courses',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options'}
-    />
+    <Icon type="Entypo" name='open-book' />
+
   ),
 };
 
@@ -69,10 +64,7 @@ const TasksStack = createStackNavigator({
 TasksStack.navigationOptions = {
   tabBarLabel: 'Tasks',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options'}
-    />
+    <Icon type="FontAwesome" name='tasks' />
   ),
 };
 

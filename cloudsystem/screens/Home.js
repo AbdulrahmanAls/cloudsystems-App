@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Header, Content, Badge, Text, Icon, Body } from 'native-base';
+import { Container, Header, Content, Badge, Text, Icon, Body, Card } from 'native-base';
 import {
   Image,
   Platform,
@@ -23,10 +23,11 @@ export default class Home extends React.Component {
       <Container>
   <Header />
   <Content>
-    <Body>
-   <Text> I am Home </Text>
-   <Icon name='home' />
-  </Body>
+ <Card>
+
+
+
+   </Card>
   </Content>
 </Container>
     );
