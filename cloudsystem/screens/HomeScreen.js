@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Header, Content, Card, CardItem, Text, Icon, Right } from 'native-base';
+import { Container, Header, Content, Badge, Text, Icon } from 'native-base';
 import {
   Image,
   Platform,
@@ -23,24 +23,30 @@ export default class HomeScreen extends React.Component {
       <Container>
         <Header />
         <Content>
-          <Card>
-            <CardItem>
-              <Icon active name="logo-googleplus" />
-              <Text>Google Plus</Text>
-              <Right>
-                <Icon name="arrow-forward" />
-              </Right>
-             </CardItem>
-           </Card>
-           <Card>
-             <CardItem>
-               <Icon active name="logo-twitter" />
-               <Text>Google Plus</Text>
-               <Right>
-                 <Icon name="arrow-forward" />
-               </Right>
-              </CardItem>
-            </Card>
+          <Badge>
+            <Text>2</Text>
+          </Badge>
+          <Badge primary>
+            <Text>2</Text>
+          </Badge>
+          <Badge success>
+            <Text>2</Text>
+          </Badge>
+          <Badge info>
+            <Text>2</Text>
+          </Badge>
+          <Badge warning>
+            <Text>2</Text>
+          </Badge>
+          <Badge danger>
+            <Text>2</Text>
+          </Badge>
+          <Badge primary>
+          <Icon name="star" style={{ fontSize: 15, color: "#fff", lineHeight: 20 }}/>
+          </Badge>
+          <Badge style={{ backgroundColor: 'black' }}>
+            <Text style={{ color: 'white' }}>1866</Text>
+          </Badge>
         </Content>
       </Container>
     );
