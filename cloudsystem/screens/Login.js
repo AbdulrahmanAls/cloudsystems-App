@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Header, Content, Badge, Text, Icon, Body, Tabs, Tab, Card, CardItem, Input } from 'native-base';
+import { Container, Header, Content, Badge, Text, Icon, Body, Tabs, Tab, Card, CardItem, Input ,Button} from 'native-base';
+// import MainTabNavigator from "../navigarion/MainTabNavigator";
 import {
   Image,
   Platform,
@@ -32,11 +33,37 @@ export default class Login extends React.Component {
   constructor() {
     super();
     this.state = {
-      text: ''
+      EmailLogin: '',
+      password: '',
+      userName:''
     };
   }
 
+  signUpUser = (EmailLogin,password) =>{
+    try{
+        if(this.state.password.length<8){
+          alert("please enter more then 8 char")
+        }
+        firebase.auth().createUserAndRetrieveDataWithEmailAndPassword(EmailLogin,password)
 
+    }catch(error){
+      console.log(error.toString());
+
+    }
+
+  }
+  loginUser = (EmailLogin,password) =>{
+    try{
+      firebase.auth().signInWithEmailAndPassword(EmailLogin,password).then(function (user){
+        console.log(user)
+        // return(<MainTabNavigator/>)
+
+      })
+    }catch(error){
+      console.log(error.toString());
+    }
+
+  }
 
   render() {
     return (
@@ -52,15 +79,28 @@ export default class Login extends React.Component {
             <Card>
               <Input
                 placeholder="Email:"
-                onChangeText={(text) => this.setState({ text })}
+                onChangeText={(EmailLogin) => this.setState({ EmailLogin })}
               />
             </Card>
             <Card>
               <Input
                 placeholder="Password:"
-                onChangeText={(text) => this.setState({ text })}
+                secureTextEntry={true}
+                autoCorrect={false}
+                autoCapitalize="none"
+                onChangeText={(password) => this.setState({ password })}
+
               />
             </Card>
+            <Button
+              block
+              info
+              success
+              onPress = {() => this.loginUser(this.state.EmailLogin,this.state.password)}
+             >
+              <Text>Login</Text>
+            </Button>
+
             </Content>
         </Tab>
 
@@ -71,21 +111,32 @@ export default class Login extends React.Component {
             <Card>
               <Input
                 placeholder="User Name:"
-                onChangeText={(text) => this.setState({ text })}
+                onChangeText={(userName) => this.setState({ userName })}
               />
             </Card>
             <Card>
               <Input
                 placeholder="Email:"
-                onChangeText={(text) => this.setState({ text })}
+                onChangeText={(EmailLogin) => this.setState({ EmailLogin })}
               />
             </Card>
             <Card>
             <Input
                 placeholder="Password:"
-                onChangeText={(text) => this.setState({ text })}
+                secureTextEntry={true}
+                autoCorrect={false}
+                autoCapitalize="none"
+                onChangeText={(password) => this.setState({ password })}
               />
               </Card>
+              <Button
+                block
+                info
+                success
+                onPress = {() => this.signUpUser(this.state.EmailLogin,this.state.password)}
+               >
+                <Text>Sign Up</Text>
+                  </Button>
         </Content>
         </Tab>
 
