@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Header, Content, Badge, Text, Icon, Body, CardItem, Card, H1, Tabs, Tab } from 'native-base';
+import { Container, Header, Content, Badge, Text, Icon, Body, CardItem, Card, H1, Tabs, Tab, Button } from 'native-base';
 import {
   Image,
   Platform,
@@ -22,34 +22,40 @@ export default class Tasks extends React.Component {
     return (
       <Container>
         <Header hasTabs />
-            <View style={{alignItems: 'center'}}>
-            <Text> {'\n'} </Text>
-            <Text style={styles.Text}> Tasks </Text>
-            <Text> {'\n'} </Text>
-            </View>
+        <View style={{ alignItems: 'center' }}>
+          <Text> {'\n'} </Text>
+          <Text style={styles.Text}> Tasks </Text>
+          <Text> {'\n'} </Text>
+        </View>
         <Tabs>
-        <Tab heading="Indevidual Tasks">
-        <Content>
-            <Card title='Containers'>
-            <View style={{padding: 3}}>
-              <Text> * What is a Container Orchestration? Why do we need it? </Text>
-              <Text> * What is Kubernetes? What is the benefit of Kubernetes? </Text>
-              <Text> * What is Minikube? What are Minikube Features?  </Text>
-              </View>
-            </Card>
-         
+          <Tab heading="Indevidual Tasks">
+            <Content>
+              <Card>
+                <Card>
+                  <Image source={{ uri: 'https://journocode.com/wp-content/uploads/2016/06/htmlCssJS.jpg' }} style={{ height: 200, width: null, flex: 1 }} />
+                </Card>
+                <Text> Build Front-End web application using  HTML, CSS and Java Script, the application should have:</Text>
+                <Text>* Login Page</Text>
+                <Text>* Menu Bar</Text>
+                <Text>* sepreat Pages linked together </Text> 
+                <CardItem footer>
+              <Text>24 Hours to complete this task</Text>
+            </CardItem>
+                <Text> {'\n'} </Text> 
+                <Button block success> <Text> Submit Task </Text> </Button>
+              </Card>
             </Content>
-        </Tab>
+          </Tab>
 
 
-      <Tab heading="Group Tasks">
-        <Content>
-            <Card>
-            <Text>  There are no Group Tasks right now .. </Text>
-            <Text>  Keep calm and have fun !! </Text>
-            </Card>
-        </Content>
-        </Tab>
+          <Tab heading="Group Tasks">
+            <Content>
+              <Card>
+                <Text>  There are no Group Tasks right now .. </Text>
+                <Text>  Keep calm and have fun !! </Text>
+              </Card>
+            </Content>
+          </Tab>
 
 
         </Tabs>
@@ -65,6 +71,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 38,
     alignItems: "center",
-    justifyContent:"center",
+    justifyContent: "center",
   }
 });
