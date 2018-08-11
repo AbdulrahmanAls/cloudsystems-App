@@ -38,25 +38,30 @@ export default class Home extends React.Component {
             </CardItem>
             <CardItem>
               <Body>
-                <Image source={{uri:'https://thumbs.dreamstime.com/b/error-page-not-found-pink-heart-split-half-91274221.jpg'}} style={{height: 200, width: null, flex: 1}}/>
+                <Image source={{uri:'https://thumbs.dreamstime.com/b/error-page-not-found-pink-heart-split-half-91274221.jpg'}} style={{height: 200, width:320, flex: 1}}/>
                 <Text>
                  Does anyone knows why this error is showing every time I Try to deploy my app on Github ? 
                 </Text>
               </Body>
-            </CardItem>        <CardItem>
+            </CardItem>
+            </Card>
+
+            <Card>
+            <CardItem>
               <Left>
-                <Thumbnail source={{uri: 'https://jabbareh.files.wordpress.com/2011/12/personal-information.png'}} />
+                <Thumbnail source={{uri: 'https://cdn4.iconfinder.com/data/icons/groups-and-people-line/120/line_group_girls-512.png'}} />
                 <Body>
-                  <Text>Nawaf Alharby</Text>
-                  <Text note>2 Hours ago</Text>
+                  <Text>Jehan Ashor</Text>
+                  <Text note>15 Hours ago</Text>
                 </Body>
               </Left>
             </CardItem>
             <CardItem>
               <Body>
-                <Image source={{uri:'https://thumbs.dreamstime.com/b/error-page-not-found-pink-heart-split-half-91274221.jpg'}} style={{height: 200, width: null, flex: 1}}/>
+                <Image source={{uri:'https://www.fespugtmadrid.es/wp-content/uploads/2017/02/reunion.png'}} style={{height: 200, width: 320, flex: 1}}/>
                 <Text>
-                 Does anyone knows why this error is showing every time I Try to deploy my app on Github ? 
+                We are so happy to announce that Mr.Alslamah will be joining us next week at zoom meetings, so that
+                we can learn from his knowledge and bla bla bla ..  
                 </Text>
               </Body>
             </CardItem>
