@@ -25,7 +25,7 @@ export default class First extends React.Component {
             <CardItem>
               <Body>
               <View style={{alignItems: 'center'}}>
-              <Text style={styles.bigblue}>{'\n Welcome to cloud systems App\n'}</Text>
+              <Text style={styles.Text}>{'\n Welcome to cloud systems App\n'}</Text>
               </View>
               </Body>
             </CardItem>
@@ -40,7 +40,7 @@ export default class First extends React.Component {
   }
 
   const styles = StyleSheet.create({
-    bigblue: {
+    Text: {
       color: 'aqua',
       textAlign: 'center',
       fontSize: 40,

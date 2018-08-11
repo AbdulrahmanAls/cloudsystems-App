@@ -21,11 +21,10 @@ export default class Courses extends React.Component {
   render() {
     return (
       <Container>
-        <Header hasTabs />
+     
         <View style={{ alignItems: 'center' }}>
-          <Text> {'\n'} </Text>
+        <Text> {'\n'} </Text>
           <Text style={styles.Text}>Courses </Text>
-          <Text> {'\n'} </Text>
         </View>
         <Tabs>
           <Tab heading="Free Courses">
