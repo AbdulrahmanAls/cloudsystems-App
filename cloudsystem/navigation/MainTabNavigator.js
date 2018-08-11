@@ -11,17 +11,6 @@ import Persional from '../screens/Persional';
 import Courses from '../screens/Courses';
 import Tasks from '../screens/Tasks';
 
-const StartStack = createStackNavigator({
-  Start: First,
-});
-
-StartStack.navigationOptions = {
-  tabBarLabel: 'Start',
-  tabBarIcon: ({ focused }) => (
-<Icon name='log-in' />
-  ),
-};
-
 const HomeStack = createStackNavigator({
   Home: Home,
 });
@@ -69,7 +58,6 @@ TasksStack.navigationOptions = {
 };
 
 export default createBottomTabNavigator({
-  StartStack,
   HomeStack,
   CoursesStack,
   TasksStack,

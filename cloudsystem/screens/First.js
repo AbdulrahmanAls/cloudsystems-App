@@ -12,6 +12,7 @@ import {
 import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
+import Login from './Login';
 
 export default class First extends React.Component {
     render() {
@@ -30,7 +31,9 @@ export default class First extends React.Component {
               </Body>
             </CardItem>
             <Button block info>
-              <Text>Start</Text>
+              <Text
+              onPress={<Login/>}
+              >Start</Text>
             </Button>
           </Card>
         </Content>

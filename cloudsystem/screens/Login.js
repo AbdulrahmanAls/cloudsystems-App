@@ -147,3 +147,66 @@ export default class Login extends React.Component {
     );
   }
 }
+
+
+/*
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      Auth: null,
+      email: '',
+      password: '',
+    };
+  }
+
+  onLogin = (email, password) => {
+    try {
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(email, password)
+        .than(function(user) {
+          console.log(user);
+          this.setState({ Auth: firebase.auth().currentUser });
+        });
+    } catch (error) {
+      console.log(error.toString());
+      var user = firebase.auth().currentUser;
+      var uid;
+      uid = user.uid;
+      this.setState({ Auth: uid });
+      Alert.alert('Credentials', `${this.state.Auth}`);
+    }
+  };
+  render() {
+    if (!this.state.Auth) {
+      return (
+        <View style={styles.container}>
+          <TextInput
+            value={this.state.email}
+            onChangeText={email => this.setState({ email })}
+            placeholder={'email'}
+            style={styles.input}
+          />
+          <TextInput
+            value={this.state.password}
+            onChangeText={password => this.setState({ password })}
+            placeholder={'Password'}
+            secureTextEntry={true}
+            style={styles.input}
+          />
+
+          <Button
+            title={'LogIn'}
+            style={styles.input}
+            onPress={() => this.onLogin(this.state.email,         this.state.password)}
+          />
+        </View>
+      );
+    } else {
+      return <RootStack />;
+    }
+  }
+}
+*/

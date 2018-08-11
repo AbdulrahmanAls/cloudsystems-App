@@ -18,18 +18,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-
-      <MainTabNavigator />
-
+      <First />
     )
   }
 }
-const styles = StyleSheet.create({
-  bigblue: {
-    color: 'aqua',
-    textAlign: 'center',
-    fontSize: 45,
-    alignItems: "center",
-    justifyContent: "center",
-  }
-});

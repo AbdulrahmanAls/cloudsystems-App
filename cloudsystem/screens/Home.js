@@ -44,6 +44,20 @@ export default class Home extends React.Component {
                 </Text>
               </Body>
             </CardItem>
+            <CardItem>
+            <Left>
+                <Button transparent textStyle={{color: '#87838B'}}>
+                  <Icon type="FontAwesome" name="thumbs-o-up" />
+                  <Text>7 likes</Text>
+                </Button>
+              </Left>
+              <Right>
+                <Button transparent textStyle={{color: '#87838B'}}>
+                  <Icon type="FontAwesome" name="comments" />
+                  <Text>3 Comments</Text>
+                </Button>
+              </Right>
+              </CardItem>
             </Card>
 
             <Card>
@@ -65,6 +79,20 @@ export default class Home extends React.Component {
                 </Text>
               </Body>
             </CardItem>
+            <CardItem>
+            <Left>
+                <Button transparent textStyle={{color: '#87838B'}}>
+                  <Icon type="FontAwesome" name="thumbs-o-up" />
+                  <Text>113 likes</Text>
+                </Button>
+              </Left>
+              <Right>
+                <Button transparent textStyle={{color: '#87838B'}}>
+                  <Icon type="FontAwesome" name="comments" />
+                  <Text>42 Comments</Text>
+                </Button>
+              </Right>
+              </CardItem>
           </Card>
   </Content>
 </Container>
