@@ -33,18 +33,18 @@ export default class Login extends React.Component {
   constructor() {
     super();
     this.state = {
-      EmailLogin: '',
+      Email: '',
       password: '',
       userName:''
     };
   }
 
-  signUpUser = (EmailLogin,password) =>{
+  signUpUser = (Email,password) =>{
     try{
         if(this.state.password.length<8){
           alert("please enter more then 8 char")
         }
-        firebase.auth().createUserAndRetrieveDataWithEmailAndPassword(EmailLogin,password)
+        firebase.auth().createUserAndRetrieveDataWithEmailAndPassword(Email,password)
 
     }catch(error){
       console.log(error.toString());
@@ -52,9 +52,9 @@ export default class Login extends React.Component {
     }
 
   }
-  loginUser = (EmailLogin,password) =>{
+  loginUser = (Email,password) =>{
     try{
-      firebase.auth().signInWithEmailAndPassword(EmailLogin,password).then(function (user){
+      firebase.auth().signInWithEmailAndPassword(Email,password).then(function (user){
         console.log(user)
         // return(<MainTabNavigator/>)
 
@@ -82,7 +82,7 @@ export default class Login extends React.Component {
             <Card>
               <Input
                 placeholder="Email:"
-                onChangeText={(EmailLogin) => this.setState({ EmailLogin })}
+                onChangeText={(Email) => this.setState({ Email })}
               />
             </Card>
             <Card>
@@ -99,7 +99,7 @@ export default class Login extends React.Component {
               block
               info
               success
-              onPress = {() => this.loginUser(this.state.EmailLogin,this.state.password)}
+              onPress = {() => this.loginUser(this.state.Email,this.state.password)}
              >
               <Text>Login</Text>
             </Button>
@@ -120,7 +120,7 @@ export default class Login extends React.Component {
             <Card>
               <Input
                 placeholder="Email:"
-                onChangeText={(EmailLogin) => this.setState({ EmailLogin })}
+                onChangeText={(Email) => this.setState({ Email })}
               />
             </Card>
             <Card>
@@ -136,7 +136,7 @@ export default class Login extends React.Component {
                 block
                 info
                 success
-                onPress = {() => this.signUpUser(this.state.EmailLogin,this.state.password)}
+                onPress = {() => this.signUpUser(this.state.Email,this.state.password)}
                >
                 <Text>Sign Up</Text>
                   </Button>
