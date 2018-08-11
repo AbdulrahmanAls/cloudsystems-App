@@ -30,9 +30,14 @@ export default class Tasks extends React.Component {
         <Tabs>
         <Tab heading="Indevidual Tasks">
         <Content>
-            <Card>
-              <Text>  Solo  </Text>
+            <Card title='Containers'>
+            <View style={{padding: 3}}>
+              <Text> * What is a Container Orchestration? Why do we need it? </Text>
+              <Text> * What is Kubernetes? What is the benefit of Kubernetes? </Text>
+              <Text> * What is Minikube? What are Minikube Features?  </Text>
+              </View>
             </Card>
+         
             </Content>
         </Tab>
 
@@ -40,7 +45,8 @@ export default class Tasks extends React.Component {
       <Tab heading="Group Tasks">
         <Content>
             <Card>
-            <Text>  Group  </Text>
+            <Text>  There are no Group Tasks right now .. </Text>
+            <Text>  Keep calm and have fun !! </Text>
             </Card>
         </Content>
         </Tab>
