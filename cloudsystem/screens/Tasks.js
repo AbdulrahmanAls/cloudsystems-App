@@ -26,7 +26,7 @@ export default class Tasks extends React.Component {
           <Text style={styles.Text}> Tasks </Text>
         </View>
         <Tabs>
-          <Tab heading="Indevidual Tasks">
+          <Tab heading="Individual Tasks">
             <Content>
               <Card>
                 <Card>

@@ -10,7 +10,6 @@ import {
   View,
 } from 'react-native';
 import { WebBrowser } from 'expo';
-
 import { MonoText } from '../components/StyledText';
 import Login from './Login';
 
@@ -31,9 +30,7 @@ export default class First extends React.Component {
               </Body>
             </CardItem>
             <Button block info>
-              <Text
-              onPress={<Login/>}
-              >Start</Text>
+              <Text>Start</Text>
             </Button>
           </Card>
         </Content>
@@ -41,6 +38,7 @@ export default class First extends React.Component {
       );
     }
   }
+
 
   const styles = StyleSheet.create({
     Text: {
