@@ -72,6 +72,9 @@ export default class Login extends React.Component {
         <CardItem cardBody>
               <Image source={{uri: 'https://www.logolynx.com/images/logolynx/62/62ca7aaf03633173c02c1cfd69d3e02d.jpeg'}} style={{height: 100, width: null, flex: 1}}/>
             </CardItem>
+            <CardItem>
+            <Text style={styles.Text}>{'Welcome to cloud systems App'}</Text>
+              </CardItem>
         <Tabs>
         <Tab heading="Log-In">
         <Content>
@@ -147,6 +150,16 @@ export default class Login extends React.Component {
     );
   }
 }
+const styles = StyleSheet.create({
+  Text: {
+    color: 'aqua',
+    textAlign: 'center',
+    fontSize: 40,
+    alignItems: "center",
+    justifyContent:"center",
+  }
+});
+
 
 
 /*
