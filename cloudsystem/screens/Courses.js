@@ -21,9 +21,11 @@ export default class Courses extends React.Component {
   render() {
     return (
       <Container>
+        <Header hasTabs />
         <View style={{ alignItems: 'center' }}>
           <Text> {'\n'} </Text>
           <Text style={styles.Text}>Courses </Text>
+          <Text> {'\n'} </Text>
         </View>
         <Tabs>
           <Tab heading="Free Courses">
@@ -66,7 +68,7 @@ export default class Courses extends React.Component {
                 </Card>
                 <Text> Learn HR Fundamentals for a Career in Human Resources </Text>
                 <Text> {'\n'} </Text>
-                <Button block dark> <Text> Enroll Now </Text> </Button>
+                <Button block dark> <Text> 50$ </Text> </Button>
               </Card>
 
               <Card>
@@ -75,7 +77,7 @@ export default class Courses extends React.Component {
                 </Card>
                 <Text> How I Learned To Program in C++ - In A Few Days! </Text>
                 <Text> {'\n'} </Text>
-                <Button block dark> <Text> Enroll Now </Text> </Button>
+                <Button block dark> <Text>30$ </Text> </Button>
               </Card>
 
             </Content>
