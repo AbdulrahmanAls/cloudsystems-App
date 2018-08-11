@@ -21,11 +21,9 @@ export default class Tasks extends React.Component {
   render() {
     return (
       <Container>
-        <Header hasTabs />
         <View style={{ alignItems: 'center' }}>
           <Text> {'\n'} </Text>
           <Text style={styles.Text}> Tasks </Text>
-          <Text> {'\n'} </Text>
         </View>
         <Tabs>
           <Tab heading="Indevidual Tasks">

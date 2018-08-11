@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Header, Content, Badge, Text, Icon, Body, Tabs, Tab, Card, CardItem, Input ,Button} from 'native-base';
-// import MainTabNavigator from "../navigarion/MainTabNavigator";
+import {MainTabNavigator} from "../navigation/MainTabNavigator";
 import {
   Image,
   Platform,
