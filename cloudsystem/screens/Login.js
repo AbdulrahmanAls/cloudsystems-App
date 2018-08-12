@@ -15,12 +15,7 @@ import * as firebase from 'firebase';
 
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyD8J8ZrX41YJFwrzhpKoPc-xSmzuNP8eU4",
-  authDomain: "cloudsystem-app-group-a.firebaseapp.com",
-  databaseURL: "https://cloudsystem-app-group-a.firebaseio.com",
-  projectId: "cloudsystem-app-group-a",
-  storageBucket: "cloudsystem-app-group-a.appspot.com",
-  messagingSenderId: "219775894185"
+
 };
 firebase.initializeApp(config);
 
